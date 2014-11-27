@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:objc"
+      name = "objc">
+      <Group
+         location = "group:DataManager"
+         name = "DataManager">
+         <FileRef
+            location = "group:VIPERDataManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:VIPERDataManager.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Logic"
+         name = "Logic">
+         <FileRef
+            location = "group:VIPERInteractor.h">
+         </FileRef>
+         <FileRef
+            location = "group:VIPERInteractor.m">
+         </FileRef>
+         <FileRef
+            location = "group:VIPERPresenter.h">
+         </FileRef>
+         <FileRef
+            location = "group:VIPERPresenter.m">
+         </FileRef>
+         <FileRef
+            location = "group:VIPERWireframe.h">
+         </FileRef>
+         <FileRef
+            location = "group:VIPERWireframe.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Protocols"
+         name = "Protocols">
+         <FileRef
+            location = "group:VIPERProtocols.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:View"
+         name = "View">
+         <FileRef
+            location = "group:VIPERViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:VIPERViewController.m">
+         </FileRef>
+         <FileRef
+            location = "group:VIPERViewController.xib">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
