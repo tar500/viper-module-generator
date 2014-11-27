@@ -5,6 +5,27 @@ Viper Module Generator
 [![Test Coverage](https://codeclimate.com/github/teambox/viper-module-generator/badges/coverage.svg)](https://codeclimate.com/github/teambox/viper-module-generator)
 [![Dependency Status](https://gemnasium.com/teambox/viper-module-generator.svg)](https://gemnasium.com/teambox/viper-module-generator)
 
+This fork provides a "light" template for Objective-C only with the next structure:
+
+```bash
+.objc
++-- DataManager
+|   +-- VIPERDataManager.h
+|   +-- VIPERDataManager.m
++-- Logic
+|   +-- VIPERInteractor.h
+|   +-- VIPERInteractor.m
+|   +-- VIPERPresenter.h
+|   +-- VIPERPresenter.m
+|   +-- VIPERWireFrame.h
+|   +-- VIPERWireFrame.m
++-- View
+|   +-- VIPERViewController.h
+|   +-- VIPERViewController.m
+|   +-- VIPERViewController.xib
++-- Protocols
+|   +-- VIPERProtocols.h
+```
 
 ![image](http://www.objc.io/images/issue-13/2014-06-07-viper-intro.jpg)
 
