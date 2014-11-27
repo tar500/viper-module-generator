@@ -26,6 +26,7 @@ This fork provides a "light" template for Objective-C only with the next structu
 +-- Protocols
 |   +-- VIPERProtocols.h
 ```
+Usage: vipergen generate MyModuleName --template=light --path=/path/to/folder
 
 ![image](http://www.objc.io/images/issue-13/2014-06-07-viper-intro.jpg)
 
