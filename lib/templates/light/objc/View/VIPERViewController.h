@@ -1,6 +1,5 @@
 //
-// Created by vipergen on 2014.
-// Copyright (c) 2014 DB Best. All rights reserved.
+// Created by vipergen
 //
 
 #import <UIKit/UIKit.h>
