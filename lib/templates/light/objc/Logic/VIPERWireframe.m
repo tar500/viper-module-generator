@@ -13,7 +13,7 @@
 
 @interface VIPERWireframe()
 @property (nonatomic, strong) VIPERPresenter *presenter;
-@property (nonatomic, strong) VIPERViewController *view;
+@property (nonatomic, strong) VIPERViewController *viewController;
 @end
 
 @implementation VIPERWireframe
@@ -26,18 +26,21 @@
     return self;
 }
 
+
+#pragma mark - Dependencies
+
 - (void)connectDependencies {
     
     // Generating module components
-    self.view = [[VIPERViewController alloc] init];
+    self.viewController = [[VIPERViewController alloc] init];
     VIPERPresenter *presenter = [VIPERPresenter new];
     VIPERInteractor *interactor = [VIPERInteractor new];
     VIPERDataManager *dataManager = [VIPERDataManager new];
     
     // Connecting
-    self.view.presenter = presenter;
+    self.viewController.presenter = presenter;
     
-    presenter.view = self.view;
+    presenter.view = self.viewController;
     presenter.wireframe = self;
     presenter.interactor = interactor;
     
@@ -47,11 +50,38 @@
     self.presenter = presenter;
 }
 
-- (void)presentFromNavigationController:(UINavigationController *)navController
-{
-    //TOODO - New view controller presentation (present, push, pop, .. )
-    [navController pushViewController:self.view animated:YES];
+// Call this method in order to dealloc all of this module hierarchy
+- (void)disconnectDependencies {
+    self.viewController = nil;
+    self.presenter = nil;
+}
+
+
+#pragma mark - Present/Dismiss
+
+- (void)presentFromNavigationController:(UINavigationController *)navController {
+
+    [navController pushViewController:self.viewController animated:YES];
     
+    
+//    // Present as Modal VC
+//    [navController presentViewController:self.viewController animated:YES completion:^{
+//
+//    }];
+    
+}
+
+- (void)dismiss {
+    
+    [self.viewController.navigationController popViewControllerAnimated:YES];
+    [self disconnectDependencies];
+    
+    
+//    // Dismiss Modal VC
+//    __weak typeof (self) weakSelf = self;
+//    [self.viewController.presentingViewController dismissViewControllerAnimated:YES completion:^{
+//        [weakSelf disconnectDependencies];
+//    }];
 }
 
 @end

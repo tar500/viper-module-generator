@@ -11,4 +11,6 @@
 
 - (void)presentFromNavigationController:(UINavigationController *)navController;
 
+- (void)dismiss;
+
 @end
